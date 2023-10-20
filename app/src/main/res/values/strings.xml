@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FCMApp</string>
+    <string name="file_screen">File Selection screen</string>
+    <string name="location_screen">Location screen</string>
+    <string name="empty_directory">Empty Directory</string>
+    <string name="storage_removed">Storage was removed or unmounted.</string>
+    <string name="choose_file">Select a file</string>
+    <string name="error_selecting_file">Error selecting File</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="permission_required">Notification permission access is required.</string>
+    <string name="ok">OK</string>
+    <string name="permission_granted">Permission is granted.</string>
+</resources>

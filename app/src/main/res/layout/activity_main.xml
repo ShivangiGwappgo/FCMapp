@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+</data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:background="@color/green"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/user_id"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/layout_bg"
+        android:hint="Enter user id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:textSize="16dp"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        />
+    <Button
+        android:id="@+id/btn_uploadpdf"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Upload PDF file"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintRight_toLeftOf="@+id/select_photo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/select_photo"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/user_id"
+        />
+    <Button
+        android:layout_below="@+id/btn_uploadpdf"
+        android:id="@+id/select_photo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:text="Select Photo"
+        app:layout_constraintLeft_toRightOf="@+id/btn_uploadpdf"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintStart_toEndOf="@+id/btn_uploadpdf"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/user_id"
+
+        />
+
+    <ImageView
+        android:layout_below="@+id/select_photo"
+        android:id="@+id/img_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/select_photo"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/progress_txt"
+            android:layout_below="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploading..."
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/purple0"
+            android:layout_centerHorizontal="true"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:progress="40" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_retrofit"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Upload by Retrofit"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintRight_toLeftOf="@+id/btn_volley"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_volley"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/img_viewer"
+        />
+    <Button
+        android:id="@+id/btn_volley"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:text="Upload by Volley"
+        app:layout_constraintLeft_toRightOf="@+id/btn_retrofit"
+        android:background="@drawable/layout_bg"
+        app:layout_constraintStart_toEndOf="@+id/btn_retrofit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/img_viewer"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
