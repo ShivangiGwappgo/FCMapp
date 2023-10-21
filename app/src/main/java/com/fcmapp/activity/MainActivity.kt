@@ -49,6 +49,7 @@ class MainActivity :  AppCompatActivity() {
             startActivity(intent)
         }
 
+
         onClickRequestPermission(layout)
     }
     val requestPermissionLauncher = registerForActivityResult(
@@ -91,7 +92,6 @@ class MainActivity :  AppCompatActivity() {
                     )
                 }
             }
-
             else -> {
                 requestPermissionLauncher.launch(
                     Manifest.permission.POST_NOTIFICATIONS
