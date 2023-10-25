@@ -26,7 +26,7 @@ class MainViewModel   : ViewModel() {
                 }
                 override fun onFailure(call: Call<FileResponse>, t: Throwable) {
                     Log.d("Location fail..", t.message.toString())
-                    callBack.onSuccess( t.message.toString())
+                    callBack.onFailure( t.message.toString())
                 }
             })
 

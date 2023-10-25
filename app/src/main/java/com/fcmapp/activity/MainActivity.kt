@@ -69,15 +69,19 @@ class MainActivity :  AppCompatActivity() {
                 Manifest.permission.POST_NOTIFICATIONS
             ) == PackageManager.PERMISSION_GRANTED -> {
 
+
+/*
                 layout.showSnackbar(
                     view,
                     getString(R.string.permission_granted),
                     Snackbar.LENGTH_SHORT,
                     null
                 ) {}
+*/
+
             }
 
-            ActivityCompat.shouldShowRequestPermissionRationale(
+                ActivityCompat.shouldShowRequestPermissionRationale(
                 this,
                 Manifest.permission.POST_NOTIFICATIONS
             ) -> {

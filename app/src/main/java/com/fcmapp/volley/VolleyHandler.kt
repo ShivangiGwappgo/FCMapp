@@ -67,7 +67,7 @@ class VolleyHandler(context: Context) {
      fun saveMultipartImage(userId:String,filename:String,byteArray:ByteArray,callBack: OperationalCallBack) {
         // loading or check internet connection or something...
         // ... then
-         val url = "https://6247-2401-4900-1c19-f760-1991-eaf8-af80-b250.ngrok-free.app/wappgo/index.php/?p=multipartfileupload"
+         val url = "https://9980-2401-4900-1c19-f760-c9b7-12a0-34f3-899b.ngrok-free.app/wappgo/index.php/?p=multipartfileupload"
         val multipartRequest: VolleyMultipartRequest = object : VolleyMultipartRequest(
             Method.POST, url,
             Response.Listener<NetworkResponse> { response ->

@@ -19,8 +19,16 @@ object RetrofitInstance {
 
     val api : ProductInterface by lazy {
         Retrofit.Builder()
-           .baseUrl("https://6247-2401-4900-1c19-f760-1991-eaf8-af80-b250.ngrok-free.app/")
+           .baseUrl("https://9980-2401-4900-1c19-f760-c9b7-12a0-34f3-899b.ngrok-free.app/")
+            .addConverterFactory(GsonConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+            .create(ProductInterface::class.java)
+    }
+    val api1 : ProductInterface by lazy {
+        Retrofit.Builder()
+           .baseUrl("https://7601-2401-4900-1c19-f760-2ca9-d5be-fd08-5799.ngrok-free.app/")
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ProductInterface::class.java)
     }
